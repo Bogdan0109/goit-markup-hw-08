@@ -175,15 +175,50 @@
   margin-bottom: 32px;
 }
 
+.mob-address-list__tel {
+  @include font(500, 34px, 1.18, 0.02em);
+  // font-weight: 500;
+  // font-size: 34px;
+  // line-height: 1.18;
+  // letter-spacing: 0.02em;
+
+  color: #2196f3;
+}
+
+.mob-address-list__mailto {
+  @include font(500, 24px, 1.17, 0.02em);
+  // font-weight: 500;
+  // font-size: 24px;
+  // line-height: 1.17;
+  // letter-spacing: 0.02em;
+
+  color: #757575;
+}
+
 .mod-soc-list {
   display: inline-flex;
 }
 
-.mod-soc-list__list:not(:last-child) {
-  margin-right: 10px;
+.mod-soc-list__list {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child)::after {
+    content: '';
+    width: 22px;
+    height: 1px;
+
+    background: rgba(33, 33, 33, 0.2);
+
+    transform: rotate(90deg);
+  }
 }
 
 .mod-soc-list_link {
+  position: relative;
+
   @include font(500, 18px, 1.22, 0.02em);
   // font-weight: 500;
   // font-size: 18px;
