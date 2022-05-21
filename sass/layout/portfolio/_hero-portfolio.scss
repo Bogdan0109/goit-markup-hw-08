@@ -1,0 +1,128 @@
+.hero-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.catalog-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.catalog-list__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.catalog-list__btn {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  @include font(500, 16px, 1.63);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.63;
+
+  color: #212121;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $primary-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list__item {
+  background-color: #eeeeee;
+
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.skills-list__link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.skills-list__thumb {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.skills-list__hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  @include font(400, 18px, 1.56);
+  // font-size: 18px;
+  // line-height: 1.56;
+
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .skills-list__link:hover &,
+  .skills-list__link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.skills-list__description {
+  padding: 20px 24px;
+
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.skills-list__title {
+  margin-bottom: 4px;
+
+  @include font(700, 18px, 2, 0.06em);
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 2;
+  // letter-spacing: 0.06em;
+
+  color: #212121;
+}
+
+.skills-list__text {
+  @include font(400, 16px, 1.88);
+  // font-size: 16px;
+  // line-height: 1.88;
+
+  color: #757575;
+}
