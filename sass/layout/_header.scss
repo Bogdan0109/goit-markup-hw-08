@@ -51,6 +51,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    width: 100%;
   }
 }
 
@@ -124,6 +125,9 @@
 }
 
 .address-list {
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
@@ -132,6 +136,10 @@
 }
 
 .address-list__item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
@@ -143,6 +151,7 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+
   color: var(--header-list-address-color);
   fill: currentColor;
 
@@ -153,10 +162,16 @@
     color: var(--header-list-address-hover-color);
   }
 
-  @media screen and (min-width: 1200px) {
-    @include font(500, 14px, 1.14, 0.02em);
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+
+    @include font(500, 14px, 1.14, 0.02em);
   }
 }
 
@@ -181,6 +196,10 @@
 }
 
 .address-list__icon {
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 10px;
   }
@@ -201,24 +220,29 @@
 }
 
 .group {
+  height: 100%;
   padding: 48px 40px;
   margin-right: auto;
   margin-left: auto;
   max-width: 480px;
+
   transform: translateX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   .mob-menu.is-hidden & {
     transform: translateX(100vw);
   }
 }
 
 .menu-close-btn {
-  @extend .menu-open-btn;
   position: absolute;
   top: 10px;
   right: 15px;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @extend .menu-open-btn;
+
   &:focus {
     fill: #2196f3;
   }
@@ -226,6 +250,13 @@
 
 .menu-close-btn__icon {
   @extend .menu-open-btn__icon;
+}
+
+.navigation-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .mob-menu-list__item:not(:last-child) {
@@ -257,6 +288,7 @@
 
 .mob-address-list__item {
   margin-bottom: 32px;
+
   &:last-child {
     margin-bottom: 64px;
   }
