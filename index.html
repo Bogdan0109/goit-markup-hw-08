@@ -191,7 +191,7 @@
         </div>
       </section>
 
-      <!-- <section class="occupation section">
+      <section class="occupation section">
         <div class="conteiner">
           <h2 class="occupation__title title">Чем мы занимаемся</h2>
           <ul class="occupation__list list">
@@ -224,7 +224,20 @@
           <h2 class="team__title title">Наша команда</h2>
           <ul class="person-list list">
             <li class="person-list__item item">
-              <img src="./images/img4.jpg" alt="Член команды" width="270" class="team-img" />
+              <img
+                srcset="
+                  ./images/team/team-mob/team-mob@1-1.jpg   450w,
+                  ./images/team/team-mob/team-mob@2-1.jpg   900w,
+                  ./images/team/team-tab/team-tab@1-1.jpg   354w,
+                  ./images/team/team-tab/team-tab@2-1.jpg   708w,
+                  ./images/team/team-desk/team-desk@1-1.jpg 270w,
+                  ./images/team/team-desk/team-desk@2-1.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                src="./images/img4.jpg"
+                alt="Член команды"
+                class="team-img"
+              />
               <div class="person-list__div">
                 <h3 class="person-list__name title">Игорь Демьяненко</h3>
                 <p class="person-list__text text" lang="en">Product Designer</p>
@@ -390,7 +403,7 @@
         </div>
       </section>
 
-      <section class="company section">
+      <!-- <section class="company section">
         <div class="conteiner">
           <h2 class="company__title title">Постоянные клиенты</h2>
           <ul class="logo-company-list list">
