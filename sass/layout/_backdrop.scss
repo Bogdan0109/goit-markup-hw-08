@@ -20,7 +20,6 @@
   padding: 40px;
 
   width: 100%;
-  max-width: 450px;
   height: 610px;
 
   background: #ffffff;
@@ -32,6 +31,10 @@
 
   .backdrop.is-hidden & {
     transform: scale(0.5);
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -102,7 +105,6 @@
 .services__input {
   padding-left: 42px;
   width: 100%;
-  max-width: 370px;
   height: 44px;
 
   color: $primary-color;
@@ -114,6 +116,9 @@
 
   &:focus {
     border-color: $primary-color;
+  }
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -138,7 +143,6 @@
 .services__textarea {
   padding: 12px 16px;
   width: 100%;
-  max-width: 370px;
   height: 120px;
 
   color: $primary-color;
@@ -162,6 +166,10 @@
 
   &:focus {
     border-color: $primary-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
   }
 
   @media screen and (min-width: 1200px) {
