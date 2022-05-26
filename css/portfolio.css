@@ -487,15 +487,15 @@ img {
 .skills-list__item {
   background-color: #eeeeee;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .skills-list__item {
     width: 354px;
   }
-}
-@media screen and (max-width: 1199px) {
   .skills-list__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
+}
+@media screen and (max-width: 1199px) {
   .skills-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
